@@ -15,7 +15,6 @@ export default function manageRestaurants(state = {restaurants: []}, action) {
         case 'CHANGE_NAME':
             const restaurant = state.restaurants.find(restaurant => restaurant.id === action.payload);
             restaurant.text = "The Crusty Crab";
-            console.log(restaurant);
             return {...state, restaurants: [...state.restaurants]}
 
         default:
